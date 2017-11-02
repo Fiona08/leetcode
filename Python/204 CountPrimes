@@ -1,0 +1,9 @@
+#204
+class Sol():
+    def countPrimes(self,n):
+        is_primes=[True]*n
+        is_primes[0]=is_primes[1]=False
+        for num in range(2,int(n**0.5)+1):
+            if is_primes[num]:
+                is_primes[num*num:n:num]=[False]*len(is_primes[num*num:n:num])
+        return sum(is_primes),is_primes
