@@ -6,4 +6,4 @@ class Sol():
         for num in range(2,int(n**0.5)+1):
             if is_primes[num]:
                 is_primes[num*num:n:num]=[False]*len(is_primes[num*num:n:num])
-        return sum(is_primes),is_primes
+        return sum(is_primes)
