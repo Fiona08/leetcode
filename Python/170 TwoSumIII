@@ -12,4 +12,4 @@ class twoSum3():
         for num in self.num_count:
             if target-num in self.num_count and (target-num!=num or self.num_count[target-num]>1):
                 return True
-        return Fals
+        return False
