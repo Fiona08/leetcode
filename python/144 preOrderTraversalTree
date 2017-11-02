@@ -1,0 +1,21 @@
+# 144 preOrderTraversal
+
+class TreeNode():
+    def __init__(self,val):
+        self.val=val;
+        self.right=None
+        self.left=None
+
+class treeSol():
+def preOrderTraversal(self, root):
+        if not root:
+            return []
+        stack,pre_order=[root],[]
+        while stack:
+            cur=stack.pop()
+            pre_order.append(cur.val)
+            if cur.right is not None:
+                stack.append(cur.right)
+            if cur.left is not None:
+                stack.append(cur.left)
+        return pre_order
