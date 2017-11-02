@@ -1,0 +1,12 @@
+# 202
+
+class hashTableSol():   
+   def isHappyNumer(self,num):
+        num_appear_by_far={}
+        while num!=1 and num not in num_appear_by_far:
+            num_appear_by_far[num]=True
+            next_num=0
+            for digit in str(num):
+                next_num+=int(digit)**2
+            num=next_num
+        return num==1
