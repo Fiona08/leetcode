@@ -32,7 +32,7 @@ class BFSSol():
     def levelOrderTraversalBTII(self,root):
         if not root:
             return None
-        cur_level_node,next_level_node,levelOrder_Traversal=[],[root],[]
+        next_level_node,levelOrder_Traversal=[root],[]
         while next_level_node:
             cur_level_node=next_level_node
             next_level_node,cur_level_val=[],[]
